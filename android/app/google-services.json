@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "517200578631",
+    "project_id": "endemicspecies2021",
+    "storage_bucket": "endemicspecies2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517200578631:android:ee49d025c9ab8a52960962",
+        "android_client_info": {
+          "package_name": "com.example.plantapp2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517200578631-6ph8aavrs6g6lpvmdkiajune1fpttqti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaHiJAY2gX7rDg89sBK02crWqH9SS0RmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517200578631-6ph8aavrs6g6lpvmdkiajune1fpttqti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
