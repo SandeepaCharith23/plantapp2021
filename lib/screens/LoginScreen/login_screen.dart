@@ -4,7 +4,7 @@ import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 import 'package:plantapp2021/constrants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:plantapp2021/screens/Dashboard.dart';
+import 'package:plantapp2021/screens/Dashboard/Dashboard.dart';
 import 'package:plantapp2021/screens/details/AddSpecies.dart';
 
 class LoginScreen extends StatefulWidget {

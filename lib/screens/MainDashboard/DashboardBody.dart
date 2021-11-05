@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plantapp2021/constrants.dart';
-import 'package:plantapp2021/screens/chatScreen.dart';
+import 'package:plantapp2021/screens/ChatScreen/chatScreen.dart';
 import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 
 import 'AdvertisementBanner.dart';

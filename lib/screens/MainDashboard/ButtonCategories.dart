@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:plantapp2021/screens/Dashboard.dart';
+import 'package:plantapp2021/screens/Dashboard/Dashboard.dart';
 import 'package:plantapp2021/screens/MainDashboard/DashboardBody.dart';
-import 'package:plantapp2021/screens/chatScreen.dart';
+import 'package:plantapp2021/screens/ChatScreen/chatScreen.dart';
 import 'package:plantapp2021/screens/details/AddSpecies.dart';
 import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 class ButtonCategories extends StatelessWidget {

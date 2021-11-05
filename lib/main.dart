@@ -4,12 +4,12 @@ import 'package:plantapp2021/screens/MainDashboard/MainDashboard.dart';
 import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 
 import 'package:plantapp2021/constrants.dart';
-import 'package:plantapp2021/screens/Dashboard.dart';
-import 'package:plantapp2021/screens/chatScreen.dart';
+import 'package:plantapp2021/screens/Dashboard/Dashboard.dart';
+import 'package:plantapp2021/screens/ChatScreen/chatScreen.dart';
 import 'package:plantapp2021/screens/details/AddSpecies.dart';
-import 'package:plantapp2021/screens/login_screen.dart';
-import 'package:plantapp2021/screens/welcomescreen.dart';
-import 'package:plantapp2021/screens/Registration.dart';
+import 'package:plantapp2021/screens/LoginScreen/login_screen.dart';
+import 'package:plantapp2021/screens/WelcomeScreen/welcomescreen.dart';
+import 'package:plantapp2021/screens/RegistrationScreen/Registration.dart';
 
 
 void main() async {
