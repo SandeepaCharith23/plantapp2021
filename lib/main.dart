@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:plantapp2021/components/home_screen.dart';
+import 'package:plantapp2021/screens/MainDashboard/MainDashboard.dart';
+import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 
 import 'package:plantapp2021/constrants.dart';
 import 'package:plantapp2021/screens/Dashboard.dart';
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
        textTheme:Theme.of(context).textTheme.apply(bodyColor: KTextColour) ,
       
       ),
-      initialRoute: WelcomeScreen.id,
+      initialRoute: MainDashboard.id,
+      //initialRoute: WelcomeScreen.id,
       routes: <String,WidgetBuilder> {
        WelcomeScreen.id:(context)=>WelcomeScreen(),
        LoginScreen.id:(context)=>LoginScreen(),
@@ -39,6 +41,7 @@ class MyApp extends StatelessWidget {
        AddSepcies.id:(context)=>AddSepcies(),
        Dashboard.id:(context)=>Dashboard(),
        ChatScreen.id:(context)=>ChatScreen(),
+       MainDashboard.id:(context)=>MainDashboard(),
 
       },
        //HomeScreen(),
