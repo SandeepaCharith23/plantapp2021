@@ -1,9 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:plantapp2021/components/RoundedButton.dart';
+
 import 'package:plantapp2021/screens/RegistrationScreen/Registration.dart';
 
 import 'package:plantapp2021/screens/LoginScreen/login_screen.dart';
+import 'package:plantapp2021/screens/components/RoundedButton.dart';
 
 
 class WelcomeScreen extends StatefulWidget {

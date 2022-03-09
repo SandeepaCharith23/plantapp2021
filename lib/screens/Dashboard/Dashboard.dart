@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:plantapp2021/screens/AddSpecies.dart';
 import 'package:plantapp2021/screens/MainDashboard/MainDashboard.dart';
 import 'package:plantapp2021/screens/ChatScreen/chatScreen.dart';
-import 'package:plantapp2021/screens/details/AddSpecies.dart';
+
 import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 
 class Dashboard extends StatefulWidget {

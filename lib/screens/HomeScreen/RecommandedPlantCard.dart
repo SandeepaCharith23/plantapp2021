@@ -1,68 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plantapp2021/constrants.dart';
 
-
-class RecommandedPlants extends StatelessWidget {
-  const RecommandedPlants({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-                child: Row(
-        children:<Widget> [
-          RecommandedPlantCard(
-           image: "assets/images/plant01.jpg",
-           title: "Sandeepa",
-           country: "Srilankan",
-           price: 100,
-           press: (){
-            // Navigator.push(
-            //   context, 
-            //   MaterialPageRoute(
-            //     builder: (context) => DetailsScreen(),
-            //   ),
-            //   );
-           },
-          ),
-
-          RecommandedPlantCard(
-           image: "assets/images/plant01.jpg",
-           title: "Charith",
-           country: "Indian",
-           price: 100,
-           press: (){
-             
-           },
-          ),
-
-          RecommandedPlantCard(
-           image: "assets/images/plant01.jpg",
-           title: "Gihan",
-           country: "japanese",
-           price: 100,
-           press: (){
-             
-           },
-          ),
-
-          RecommandedPlantCard(
-           image: "assets/images/plant01.jpg",
-           title: "Sandeepa",
-           country: "Japan",
-           price: 100,
-           press: (){
-            
-           },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
+import '../../constrants.dart';
 class RecommandedPlantCard extends StatelessWidget {
   const RecommandedPlantCard({
     Key? key,
@@ -95,7 +33,7 @@ class RecommandedPlantCard extends StatelessWidget {
        children: <Widget>[
          Image.asset(image),
          GestureDetector(
-           onTap: press(),
+           onTap: ()=>press(),
              child: Container(
              
              padding: EdgeInsets.all(KdefaultPadding / 2 ),

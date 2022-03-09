@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:plantapp2021/components/body.dart';
+
 import 'package:plantapp2021/constrants.dart';
+import 'package:plantapp2021/screens/HomeScreen/body.dart';
+
 
 class HomeScreen extends StatelessWidget {
   static const String id='homescreen'; 
@@ -60,7 +62,7 @@ class MyBottomNavBar extends StatelessWidget {
           onPressed: (){},
           ),
 
-          IconButton(icon: SvgPicture.asset("assets/icons/homeicon.svg"),
+          IconButton(icon: SvgPicture.asset("assets/icons/Cart Icon.svg"),
           onPressed: (){},
           ),
 
