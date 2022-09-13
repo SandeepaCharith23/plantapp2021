@@ -1,7 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
-class Species{
-
+class Species {
   // String? SpeciesName;
   // String? SpeciesDescription;
   // String? SpeciesLocation;

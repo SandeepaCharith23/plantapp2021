@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:plantapp2021/screens/Common_Components/RoundedButton.dart';
 import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 import 'package:plantapp2021/constrants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:plantapp2021/screens/components/RoundedButton.dart';
 
 class RegistrationPage extends StatefulWidget {
   static const String id = 'registration';
@@ -19,14 +19,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
   String? emailaddress;
   String? password;
 
-  bool ShowSpin = false;
+  bool showSpin = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ModalProgressHUD(
-        inAsyncCall: ShowSpin,
+        inAsyncCall: showSpin,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
@@ -95,7 +95,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       print(emailaddress);
                       print(password);
                       setState(() {
-                        ShowSpin = true;
+                        showSpin = true;
                       });
 
                       try {
@@ -107,7 +107,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         }
 
                         setState(() {
-                          ShowSpin = false;
+                          showSpin = false;
                         });
                       } on FirebaseAuthException catch (error) {
                         Fluttertoast.showToast(

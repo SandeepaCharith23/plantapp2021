@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp2021/screens/ChatScreen/chatScreen.dart';
-import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
+
+import 'package:plantapp2021/screens/mainMarketPlace/mainMarketPlace_page.dart';
 
 class NavigationSection extends StatelessWidget {
   const NavigationSection({
@@ -12,7 +13,6 @@ class NavigationSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
-        
         children: [
           Row(
             children: [
@@ -20,40 +20,38 @@ class NavigationSection extends StatelessWidget {
                 child: Container(
                   width: 100,
                   height: 100,
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
-                      boxShadow: [
+                    boxShadow: [
                       BoxShadow(
-                      offset: Offset(0,3),
-                      blurRadius: 7,
-                      spreadRadius:3.0 ,
-                      color: Colors.grey.withOpacity(0.5)
-                        ),
-                          ],
-                    
+                          offset: Offset(0, 3),
+                          blurRadius: 7,
+                          spreadRadius: 3.0,
+                          color: Colors.grey.withOpacity(0.5)),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                    onPressed: () { 
-                       Navigator.pushNamed(context, ChatScreen.id);
-                     }, 
-                    icon: Image.asset(
-                      'assets/icons/icons-chat-64.png',
-                      fit: BoxFit.fill,
+                        onPressed: () {
+                          Navigator.pushNamed(context, ChatScreen.id);
+                        },
+                        icon: Image.asset(
+                          'assets/icons/icons-chat-64.png',
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'Chat Screen',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ], 
+                      Text(
+                        'Chat Screen',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -64,44 +62,41 @@ class NavigationSection extends StatelessWidget {
                 child: Container(
                   width: 100,
                   height: 100,
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
-                      boxShadow: [
+                    boxShadow: [
                       BoxShadow(
-                      offset: Offset(0,3),
-                      blurRadius: 7,
-                      spreadRadius:3.0 ,
-                      color: Colors.grey.withOpacity(0.5)
-                        ),
-                          ],
-                    
+                          offset: Offset(0, 3),
+                          blurRadius: 7,
+                          spreadRadius: 3.0,
+                          color: Colors.grey.withOpacity(0.5)),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                    onPressed: () { 
-                       Navigator.pushNamed(context,HomeScreen.id);
-                     }, 
-                    icon: Image.asset(
-                      'assets/icons/icons-market-64.png',
-                      fit: BoxFit.fill,
+                        onPressed: () {
+                          Navigator.pushNamed(context, MainMarketPlace.id);
+                        },
+                        icon: Image.asset(
+                          'assets/icons/icons-market-64.png',
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'MarketPlace',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ], 
+                      Text(
+                        'MarketPlace',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-
               SizedBox(
                 width: 10,
               ),
@@ -109,87 +104,80 @@ class NavigationSection extends StatelessWidget {
                 child: Container(
                   width: 100,
                   height: 100,
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
-                      boxShadow: [
+                    boxShadow: [
                       BoxShadow(
-                      offset: Offset(0,3),
-                      blurRadius: 7,
-                      spreadRadius:3.0 ,
-                      color: Colors.grey.withOpacity(0.5)
-                        ),
-                          ],
-                    
+                          offset: Offset(0, 3),
+                          blurRadius: 7,
+                          spreadRadius: 3.0,
+                          color: Colors.grey.withOpacity(0.5)),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                    onPressed: () {  }, 
-                    icon: Image.asset(
-                      'assets/icons/icons-cart-64.png',
-                      fit: BoxFit.fill,
+                        onPressed: () {},
+                        icon: Image.asset(
+                          'assets/icons/icons-cart-64.png',
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'MyCart',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ], 
+                      Text(
+                        'MyCart',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-  
             ],
           ),
-
           SizedBox(
             height: 10,
           ),
-
-           Row(
+          Row(
             children: [
-               Expanded(
+              Expanded(
                 child: Container(
                   width: 100,
                   height: 100,
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
-                      boxShadow: [
+                    boxShadow: [
                       BoxShadow(
-                      offset: Offset(0,3),
-                      blurRadius: 7,
-                      spreadRadius:3.0 ,
-                      color: Colors.grey.withOpacity(0.5)
-                        ),
-                          ],
-                    
+                          offset: Offset(0, 3),
+                          blurRadius: 7,
+                          spreadRadius: 3.0,
+                          color: Colors.grey.withOpacity(0.5)),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                    onPressed: () {  }, 
-                    icon: Image.asset(
-                      'assets/icons/icons-knowledge-64.png',
-                      fit: BoxFit.fill,
+                        onPressed: () {},
+                        icon: Image.asset(
+                          'assets/icons/icons-knowledge-64.png',
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'Knowledge',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ], 
+                      Text(
+                        'Knowledge',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -200,90 +188,81 @@ class NavigationSection extends StatelessWidget {
                 child: Container(
                   width: 100,
                   height: 100,
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
-                      boxShadow: [
+                    boxShadow: [
                       BoxShadow(
-                      offset: Offset(0,3),
-                      blurRadius: 7,
-                      spreadRadius:3.0 ,
-                      color: Colors.grey.withOpacity(0.5)
-                        ),
-                          ],
-                    
+                          offset: Offset(0, 3),
+                          blurRadius: 7,
+                          spreadRadius: 3.0,
+                          color: Colors.grey.withOpacity(0.5)),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                    onPressed: () {  }, 
-                    icon: Image.asset(
-                      'assets/icons/icons-advertisement-64.png',
-                      fit: BoxFit.fill,
+                        onPressed: () {},
+                        icon: Image.asset(
+                          'assets/icons/icons-advertisement-64.png',
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'Advertisemnet',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ], 
+                      Text(
+                        'Advertisemnet',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-
               SizedBox(
                 width: 10,
               ),
-               Expanded(
+              Expanded(
                 child: Container(
                   width: 100,
                   height: 100,
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
-                      boxShadow: [
+                    boxShadow: [
                       BoxShadow(
-                      offset: Offset(0,3),
-                      blurRadius: 7,
-                      spreadRadius:3.0 ,
-                      color: Colors.grey.withOpacity(0.5)
-                        ),
-                          ],
-                    
+                          offset: Offset(0, 3),
+                          blurRadius: 7,
+                          spreadRadius: 3.0,
+                          color: Colors.grey.withOpacity(0.5)),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                    onPressed: () {  }, 
-                    icon: Image.asset(
-                      'assets/icons/icons-profile-64.png',
-                      fit: BoxFit.fill,
+                        onPressed: () {},
+                        icon: Image.asset(
+                          'assets/icons/icons-profile-64.png',
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'Myprofile',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ], 
+                      Text(
+                        'Myprofile',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-
-              
             ],
           ),
-
-
         ],
       ),
     );

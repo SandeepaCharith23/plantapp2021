@@ -1,17 +1,27 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
 import 'package:plantapp2021/screens/AddSpecies.dart';
+
 import 'package:plantapp2021/screens/MainDashboard/MainDashboard.dart';
 import 'package:plantapp2021/screens/HomeScreen/home_screen.dart';
 
-import 'package:plantapp2021/constrants.dart';
 import 'package:plantapp2021/screens/Dashboard/Dashboard.dart';
 import 'package:plantapp2021/screens/ChatScreen/chatScreen.dart';
 
-import 'package:plantapp2021/screens/LoginScreen/login_screen.dart';
+import 'package:plantapp2021/screens/Page1-WelcomeScreen/welcomescreen.dart';
+import 'package:plantapp2021/screens/Page2-LoginScreen/SignInScreen.dart';
+import 'package:plantapp2021/screens/Page2-LoginScreen/login_screen.dart';
+import 'package:plantapp2021/screens/Page2-LoginScreen/login_success.dart';
+import 'package:plantapp2021/screens/Page3_Forget_Password_Screen/forget_Password.dart';
 import 'package:plantapp2021/screens/PlantDetailDisplay/details_screen.dart';
-import 'package:plantapp2021/screens/WelcomeScreen/welcomescreen.dart';
+import 'package:plantapp2021/screens/ProductDetailsDisplay/ProductDetailsDisplay.dart';
+import 'package:plantapp2021/screens/ProductDetailsDisplay/recommanded_product_details.dart';
+import 'package:plantapp2021/screens/SignUpScreen/SignUpScreen.dart';
+
 import 'package:plantapp2021/screens/RegistrationScreen/Registration.dart';
+import 'package:plantapp2021/screens/mainMarketPlace/mainMarketPlace_page.dart';
+import 'package:plantapp2021/themes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,18 +36,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Plant App',
-      theme: ThemeData(
-        scaffoldBackgroundColor: KBackgroundColour,
-        primaryColor: KprimaryColour,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: KTextColour),
-      ),
-      //initialRoute: HomeScreen.id,
-      //initialRoute: DetailsScreen.id,
-      //initialRoute: MainDashboard.id,
+      theme: themeData(),
+
       initialRoute: WelcomeScreen.id,
+      //initialRoute: LoginScreen.id,
+      //initialRoute: MainMarketPlace.id,
       routes: <String, WidgetBuilder>{
         WelcomeScreen.id: (context) => WelcomeScreen(),
+        LoginSuccessScreen.id: (context) => LoginSuccessScreen(),
         LoginScreen.id: (context) => LoginScreen(),
+        SignInScreen.id: (context) => SignInScreen(),
         HomeScreen.id: (context) => HomeScreen(),
         RegistrationPage.id: (context) => RegistrationPage(),
         AddSepcies.id: (context) => AddSepcies(),
@@ -45,6 +53,11 @@ class MyApp extends StatelessWidget {
         ChatScreen.id: (context) => ChatScreen(),
         MainDashboard.id: (context) => MainDashboard(),
         DetailsScreen.id: (context) => DetailsScreen(),
+        MainMarketPlace.id: (context) => MainMarketPlace(),
+        ProductDetailsDisplay.id: (context) => ProductDetailsDisplay(),
+        RecommendedProductDetails.id: (context) => RecommendedProductDetails(),
+        ForgetPasswordScreen.id: (context) => ForgetPasswordScreen(),
+        SignUpScreen.id: (context) => SignUpScreen(),
       },
       //HomeScreen(),
     );
