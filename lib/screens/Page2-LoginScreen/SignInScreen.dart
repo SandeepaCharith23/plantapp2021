@@ -1,8 +1,15 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttericon/font_awesome_icons.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:plantapp2021/Services/GoogleSignInProvider.dart';
 import 'package:plantapp2021/constrants.dart';
 import 'package:plantapp2021/screens/Common_Components/NoAccountSignUp.dart';
 
 import 'package:plantapp2021/screens/components/default_button.dart';
+import 'package:provider/provider.dart';
+import '../MainDashboard/MainDashboard.dart';
 import 'components/SignInForm.dart';
 import 'components/SocialMediaButton.dart';
 
@@ -67,7 +74,14 @@ class SignInScreen extends StatelessWidget {
                     children: [
                       SocialMediaButton(
                         icon: 'assets/icons/google-icon.svg',
-                        press: () {},
+                        press: () {
+                          // final provider = Provider.of<GoogleSignInProvider>(
+                          //   context,
+                          //   listen: false,
+                          // ).googleLoginMethod();
+
+                          //_googleSignIn(context);
+                        },
                       ),
                       SocialMediaButton(
                         icon: 'assets/icons/facebook-2.svg',
@@ -90,5 +104,29 @@ class SignInScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+bool _isLoading = false;
+
+Future<void> _googleSignIn(context) async {
+  final googleSignIn = GoogleSignIn();
+  final googleAccount = await googleSignIn.signIn();
+  if (googleAccount != null) {
+    final googleAuth = await googleAccount.authentication;
+    if (googleAuth.accessToken != null && googleAuth.idToken != null) {
+      try {
+        await FirebaseAuth.instance
+            .signInWithCredential(GoogleAuthProvider.credential(
+          idToken: googleAuth.idToken,
+          accessToken: googleAuth.accessToken,
+        ));
+        Navigator.pushNamed(context, MainDashboard.id);
+      } on FirebaseException catch (error) {
+        Fluttertoast.showToast(
+            msg: error.message!, gravity: ToastGravity.BOTTOM);
+      } catch (error) {
+      } finally {}
+    }
   }
 }
